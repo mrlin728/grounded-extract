@@ -1,0 +1,15 @@
+{
+  "name": "grounded-extract",
+  "version": "0.1.0",
+  "description": "LLM field extraction where every value must be backed by a verbatim quote from the source document.",
+  "type": "module",
+  "exports": "./src/index.ts",
+  "engines": { "node": ">=22.18" },
+  "scripts": {
+    "test": "node --test 'test/*.test.ts'",
+    "eval": "node eval/run.ts",
+    "eval:score": "node eval/run.ts --score-only"
+  },
+  "keywords": ["llm", "extraction", "grounding", "hallucination", "evaluation", "rfq", "invoice"],
+  "license": "MIT"
+}
