@@ -60,7 +60,7 @@ What this shows, honestly:
 - **The prompt does most of the work.** With the strict prompt this model made no errors on this set, so verification had nothing to catch. The set is small; treat it as a regression suite, not a benchmark.
 - **Verification is the safety net for when the prompt or model isn't that good.** Under the guess prompt it cut wrong answers from 18.7% to 3.5% and dropped zero correct answers.
 - **It cannot catch misreadings with a genuine quote.** The 4 survivors include a booking number reported as a B/L number (`BKG-55120`) and "best price (no figure given)" as a target price. The quote is real and relevant; the interpretation is wrong. That needs a human or a second model, which is why the output keeps the quote next to every value.
-- **Strict trades some coverage for safety.** The 5 fields it left empty are relative terms ("14 days net", "next Friday") that the model chose not to treat as stated.
+- **Strict trades some coverage for safety.** It left 5 stated fields empty: three relative terms ("14 days net", "within 30 days", "next Friday"), one condition rather than a date ("balance before shipment"), and one currency that appears only in line items (that invoice has no grand total).
 
 Reproduce:
 
